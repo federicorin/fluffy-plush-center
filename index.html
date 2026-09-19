@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fluffy Plush Center | Adoptá un peluche, ayudá a un callejerito</title>
+  <meta name="description" content="Cajitas con un peluche sorpresa y su certificado de adopción. La mayor parte de lo que ganamos va al refugio Callejeritos de Flores.">
+  <meta name="theme-color" content="#FBF8E6">
+
+  <!-- Vista previa al compartir el link (WhatsApp, Instagram, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fluffy Plush Center">
+  <meta property="og:description" content="No elegís a tu peluche: él te elige a vos. Cada cajita ayuda a los animales de Callejeritos de Flores.">
+  <meta property="og:image" content="https://federicorin.github.io/fluffy-plush-center/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://federicorin.github.io/fluffy-plush-center/">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Íconos reutilizables (estrellas y corazones de los stickers) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-corazon" viewBox="0 0 24 24">
+      <path d="M12 20.5s-7.4-4.5-9.3-9.1C1.3 7.9 3.4 4.5 6.9 4.5c2 0 3.6 1.1 5.1 3 1.5-1.9 3.1-3 5.1-3 3.5 0 5.6 3.4 4.2 6.9-1.9 4.6-9.3 9.1-9.3 9.1z"/>
+    </symbol>
+    <symbol id="i-estrella" viewBox="0 0 24 24">
+      <path d="M12 3.2l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6-4.4-4.1 6-.7z" stroke-linejoin="round" stroke-width="2.4" stroke="currentColor"/>
+    </symbol>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="encabezado" id="encabezado">
+    <div class="encabezado__pildora">
+      <a class="encabezado__logo" href="#inicio" aria-label="Fluffy Plush Center, volver al inicio">
+        <img src="assets/img/logo-sticker.webp" alt="" width="200" height="193">
+      </a>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-boton__icono" aria-hidden="true"></span>
+        Menú
+      </button>
+
+      <nav class="menu" id="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li>
+            <a class="menu__enlace" href="#cajita">
+              <svg class="menu__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10.5h15V20h-15zM3.5 7h17v3.5h-17zM12 7v13M12 7C10.6 4.2 7.5 3.8 7.5 5.6S10.6 7 12 7zm0 0c1.4-2.8 4.5-3.2 4.5-1.4S13.4 7 12 7z"/></svg>
+              La cajita
+            </a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="#sorpresa">
+              <svg class="menu__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6M12 17.1h.01"/></svg>
+              ¿Quién te toca?
+            </a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="#como-funciona">
+              <svg class="menu__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.2l1.5 1.5L8 5.2M4 12.2l1.5 1.5L8 11.2M4 18.2l1.5 1.5L8 17.2M11.5 6.5H20M11.5 12.5H20M11.5 18.5H20"/></svg>
+              Cómo funciona
+            </a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="#callejeritos">
+              <svg class="menu__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.8" cy="10" r="1.7"/><circle cx="10.2" cy="6.4" r="1.7"/><circle cx="13.8" cy="6.4" r="1.7"/><circle cx="17.2" cy="10" r="1.7"/><path d="M12 12c-2.5 0-5.2 3.4-5.2 5.8 0 1.5 1.1 2.2 2.4 2.2 1.1 0 1.8-.6 2.8-.6s1.7.6 2.8.6c1.3 0 2.4-.7 2.4-2.2 0-2.4-2.7-5.8-5.2-5.8z"/></svg>
+              Callejeritos
+            </a>
+          </li>
+          <li>
+            <a class="menu__cta" href="#pedidos">
+              <svg class="menu__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.5s-6.8-4.1-8.5-8.3C2.2 8 4.1 5 7.3 5c1.9 0 3.3 1 4.7 2.7C13.4 6 14.8 5 16.7 5c3.2 0 5.1 3 3.8 6.2-1.7 4.2-8.5 8.3-8.5 8.3z"/></svg>
+              Quiero la mía
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ PORTADA ============ -->
+    <section class="portada" id="inicio">
+      <div class="contenedor portada__grilla">
+        <div class="portada__texto">
+          <p class="antetitulo">Peluches rescatados · Adopción responsable</p>
+          <h1>No elegís a tu peluche. <span class="portada__giro">Él te elige a vos.</span></h1>
+          <p class="portada__bajada">
+            Cada cajita trae un peluche sorpresa que espera un hogar, con su certificado de adopción oficial.
+            Y detrás de cada una hay un propósito real: la mayor parte de lo que ganamos va a los animales del
+            refugio <strong>Los Callejeritos de Flores</strong>.
+          </p>
+          <div class="acciones">
+            <a class="boton boton--principal" href="#pedidos">Quiero adoptar uno</a>
+            <a class="boton boton--secundario" href="#callejeritos">Conocé la causa</a>
+          </div>
+        </div>
+
+        <div class="portada__sticker">
+          <!-- Confeti de los stickers: decorativo -->
+          <svg class="confeti confeti--1" aria-hidden="true"><use href="#i-estrella"/></svg>
+          <svg class="confeti confeti--2" aria-hidden="true"><use href="#i-corazon"/></svg>
+          <svg class="confeti confeti--3" aria-hidden="true"><use href="#i-corazon"/></svg>
+          <svg class="confeti confeti--4" aria-hidden="true"><use href="#i-estrella"/></svg>
+          <svg class="confeti confeti--5" aria-hidden="true"><use href="#i-corazon"/></svg>
+
+          <div class="sticker sticker--inclinado">
+            <div class="feston feston--blanco">
+              <img src="assets/img/logo-marca.webp" width="900" height="900"
+                   alt="Logo de Fluffy Plush Center: un perrito y un gatito abrazados formando un corazón">
+            </div>
+          </div>
+          <p class="nota-mano portada__nota" aria-hidden="true">¡te está esperando!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LA CAJITA (producto único) ============ -->
+    <section class="seccion" id="cajita" aria-labelledby="cajita-titulo">
+      <div class="contenedor cajita__grilla">
+        <figure class="cajita__foto">
+          <!-- COMPLETAR (opcional): si sacan una foto nueva sobre fondo claro, reemplazá assets/img/prototipo.webp -->
+          <img src="assets/img/prototipo.webp" width="800" height="1387" loading="lazy"
+               alt="Un conejito blanco de orejas largas asomándose entre papel crepe rosa dentro de su cajita">
+          <figcaption class="nota-mano">así llega a tu casa</figcaption>
+        </figure>
+
+        <div class="cajita__texto">
+          <p class="antetitulo">Un solo producto, lleno de detalles</p>
+          <h2 id="cajita-titulo">La cajita Fluffy</h2>
+          <p class="entrada">
+            Preparamos cada cajita a mano, una por una, como si fuera el traslado de un rescatado a su nuevo hogar.
+          </p>
+
+          <div class="sticker sticker--etiqueta">
+            <div class="feston feston--crema etiqueta">
+              <p class="etiqueta__kicker">
+                <span class="tinta-celeste">Paquete de</span> <span class="tinta-rosa">entrega especial</span>
+              </p>
+              <h3 class="etiqueta__titulo">Adentro vas a encontrar</h3>
+              <ul class="lista-corazones">
+                <li><strong>Un peluche sorpresa</strong>, suavecito y listo para abrazar. No sabés quién te toca hasta abrirla.</li>
+                <li><strong>Su cajita-casita</strong>, ambientada con papel crepe para que viaje cómodo.</li>
+                <li><strong>El Certificado de Adopción Oficial</strong>, para completar con tu nombre y el nombre que le elijas.</li>
+                <li><strong>Sus reglas de cuidado</strong>, para que te acompañe mucho tiempo: lavar solo a mano, no planchar nunca y secar a la sombra.</li>
+              </ul>
+              <div class="etiqueta__precio">
+                <p class="precio">$10.000</p>
+                <p class="precio__nota">Precio único. La mayor parte de lo que ganamos va a Callejeritos de Flores.</p>
+              </div>
+              <a class="boton boton--principal" href="#pedidos">Pedir mi cajita</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ¿QUIÉN TE TOCA? (mecánica sorpresa) ============ -->
+    <section class="seccion seccion--rosa" id="sorpresa" aria-labelledby="sorpresa-titulo">
+      <div class="contenedor sorpresa__grilla">
+        <div class="sorpresa__intro">
+          <h2 id="sorpresa-titulo">¿Quién te va a tocar?</h2>
+          <p class="entrada">
+            En un refugio no elegís por la foto: el vínculo aparece cuando se conocen. Por eso cada cajita trae un
+            peluche distinto, y recién al abrirla descubrís quién te eligió. Probalo: tocá una cajita.
+          </p>
+          <div class="sorpresa__pie">
+            <p class="sorpresa__aviso" aria-live="polite" id="sorpresa-aviso"></p>
+            <button class="boton boton--secundario boton--chico" type="button" id="cerrar-cajitas" hidden>Volver a cerrarlas</button>
+          </div>
+        </div>
+
+        <!-- COMPLETAR: una cajita por peluche.
+             Para cada una, reemplazá el <div class="foto-pendiente"> por:
+             <img src="assets/img/peluches/nombre.webp" alt="Descripción del peluche" loading="lazy">
+             y cambiá el nombre en <span class="cajita__nombre">. -->
+        <ul class="cajitas" role="list">
+          <li>
+            <button class="cajita" type="button" aria-pressed="false" aria-label="Cajita sorpresa 1">
+              <span class="cajita__cara cajita__frente" aria-hidden="true"><span class="cajita__signo">?</span></span>
+              <span class="cajita__cara cajita__dorso">
+                <span class="foto-pendiente">Foto del peluche 1</span>
+                <span class="cajita__nombre">Nombre 1</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="cajita" type="button" aria-pressed="false" aria-label="Cajita sorpresa 2">
+              <span class="cajita__cara cajita__frente" aria-hidden="true"><span class="cajita__signo">?</span></span>
+              <span class="cajita__cara cajita__dorso">
+                <span class="foto-pendiente">Foto del peluche 2</span>
+                <span class="cajita__nombre">Nombre 2</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="cajita" type="button" aria-pressed="false" aria-label="Cajita sorpresa 3">
+              <span class="cajita__cara cajita__frente" aria-hidden="true"><span class="cajita__signo">?</span></span>
+              <span class="cajita__cara cajita__dorso">
+                <span class="foto-pendiente">Foto del peluche 3</span>
+                <span class="cajita__nombre">Nombre 3</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="cajita" type="button" aria-pressed="false" aria-label="Cajita sorpresa 4">
+              <span class="cajita__cara cajita__frente" aria-hidden="true"><span class="cajita__signo">?</span></span>
+              <span class="cajita__cara cajita__dorso">
+                <span class="foto-pendiente">Foto del peluche 4</span>
+                <span class="cajita__nombre">Nombre 4</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="cajita" type="button" aria-pressed="false" aria-label="Cajita sorpresa 5">
+              <span class="cajita__cara cajita__frente" aria-hidden="true"><span class="cajita__signo">?</span></span>
+              <span class="cajita__cara cajita__dorso">
+                <span class="foto-pendiente">Foto del peluche 5</span>
+                <span class="cajita__nombre">Nombre 5</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="cajita" type="button" aria-pressed="false" aria-label="Cajita sorpresa 6">
+              <span class="cajita__cara cajita__frente" aria-hidden="true"><span class="cajita__signo">?</span></span>
+              <span class="cajita__cara cajita__dorso">
+                <span class="foto-pendiente">Foto del peluche 6</span>
+                <span class="cajita__nombre">Nombre 6</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="seccion" id="como-funciona" aria-labelledby="pasos-titulo">
+      <div class="contenedor pasos__grilla">
+        <div>
+          <h2 id="pasos-titulo">Cómo funciona una adopción Fluffy</h2>
+          <ol class="pasos">
+            <li class="paso">
+              <h3>Pedís tu cajita</h3>
+              <p>En nuestro stand de los recreos o por mail, cuando quieras.</p>
+            </li>
+            <li class="paso">
+              <h3>La abrís y se conocen</h3>
+              <p>Recién ahí descubrís quién te eligió. Cada peluche es distinto y cada encuentro, también.</p>
+            </li>
+            <li class="paso">
+              <h3>Lo adoptás oficialmente</h3>
+              <p>Completás el certificado con tu nombre y el nombre que elijas para él. Desde ese momento es parte de tu familia.</p>
+            </li>
+            <li class="paso paso--destacado">
+              <h3>Un callejerito de verdad recibe ayuda</h3>
+              <p>Con lo que ganamos llevamos alimento y lo que haga falta a <a href="#callejeritos">Callejeritos de Flores</a>.</p>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="certificado">
+          <img src="assets/img/certificado.webp" width="760" height="808" loading="lazy"
+               alt="Certificado de Adopción Oficial asomando de un sobre, con espacios para el nombre del dueño y de la mascota, y la tarjeta de reglas de cuidado: lavar solo a mano, no planchar nunca, secar a la sombra">
+          <figcaption>El certificado y las reglas de cuidado que vienen en cada cajita.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CALLEJERITOS DE FLORES (la alianza) ============ -->
+    <section class="seccion seccion--celeste" id="callejeritos" aria-labelledby="callejeritos-titulo">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <p class="antetitulo">Nuestra alianza</p>
+          <h2 id="callejeritos-titulo">Detrás de cada peluche, un callejerito de verdad</h2>
+        </div>
+
+        <div class="alianza__grilla">
+          <div class="alianza__relato">
+            <p class="entrada">
+              Fluffy Plush Center nació de una idea simple: si un peluche puede enseñar a cuidar, también puede ayudar a cuidar.
+            </p>
+            <p>
+              Por eso estamos aliados directamente con <strong>Los Callejeritos de Flores</strong>, un refugio que rescata animales
+              de la calle, los cuida y les busca una familia. Un animal en la calle pasa frío, hambre y peligros todos los días.
+              Los refugios como Callejeritos sostienen su trabajo gracias a voluntarios y donaciones, y cada bolsa de alimento cuenta.
+            </p>
+            <p>
+              Nuestra alianza hace que esa ayuda llegue sin intermediarios: vendemos las cajitas, juntamos lo recaudado y se lo
+              llevamos al refugio convertido en lo que más necesita.
+            </p>
+            <!-- COMPLETAR (opcional): una frase o anécdota del refugio, o una cita de alguien de Callejeritos. -->
+          </div>
+
+          <aside class="alianza__destino" aria-labelledby="destino-titulo">
+            <h3 id="destino-titulo">¿A dónde va tu compra?</h3>
+            <p>La mayor parte de nuestras ganancias va directo al refugio y se transforma en:</p>
+            <ul class="lista-corazones">
+              <li><strong>Alimento</strong> para los animales que esperan un hogar.</li>
+              <li><strong>Vacunas</strong> para los callejeritos recién nacidos.</li>
+              <li>Y mucho más.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="adopcion-real">
+          <img class="adopcion-real__logo" src="assets/img/callejeritos.webp" width="280" height="280" loading="lazy"
+               alt="Logo de Los Callejeritos de Flores: un perro y un gato sentados sobre una mano que los sostiene">
+          <div>
+            <h3>¿En tu casa hay lugar para uno de verdad?</h3>
+            <p>
+              Adoptar un animal es un compromiso para toda su vida: comida, cuidados, tiempo y mucho amor.
+              Si tu familia está lista, en Callejeritos de Flores hay muchos esperando.
+            </p>
+            <a class="boton boton--secundario" href="https://www.instagram.com/loscallejeritosdeflores/" target="_blank" rel="noopener">Conocelos en Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MISIÓN + VIDEO (panel con pestañas) ============ -->
+    <section class="seccion seccion--mision" id="mision" aria-labelledby="mision-titulo">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <p class="antetitulo">Nuestra misión</p>
+          <h2 id="mision-titulo">Jugar a adoptar enseña a cuidar</h2>
+          <p class="entrada">
+            Pensamos Fluffy para los chicos de los primeros años del colegio. Mirá nuestro pitch y conocé lo que cambia
+            cada cajita, para cada uno.
+          </p>
+        </div>
+
+        <div class="historia">
+          <div class="historia__lista" role="tablist" aria-orientation="vertical" aria-label="Nuestra misión">
+            <button class="historia__tab" type="button" role="tab" id="tab-pitch" aria-controls="panel-pitch" aria-selected="true">
+              <img class="historia__miniatura" src="assets/img/miniaturas/pitch.webp" width="240" height="150" alt="">
+              <span class="historia__tab-texto">
+                <span class="historia__tab-titulo">Nuestro pitch</span>
+                <span class="historia__tab-bajada">Quiénes somos, en dos minutos</span>
+              </span>
+            </button>
+            <button class="historia__tab" type="button" role="tab" id="tab-chicos" aria-controls="panel-chicos" aria-selected="false" tabindex="-1">
+              <img class="historia__miniatura" src="assets/img/miniaturas/chicos.webp" width="240" height="150" alt="">
+              <span class="historia__tab-texto">
+                <span class="historia__tab-titulo">Para los chicos</span>
+                <span class="historia__tab-bajada">Aprenden jugando qué es cuidar</span>
+              </span>
+            </button>
+            <button class="historia__tab" type="button" role="tab" id="tab-animales" aria-controls="panel-animales" aria-selected="false" tabindex="-1">
+              <img class="historia__miniatura" src="assets/img/miniaturas/animales.webp" width="240" height="150" alt="">
+              <span class="historia__tab-texto">
+                <span class="historia__tab-titulo">Para los animales</span>
+                <span class="historia__tab-bajada">Ayuda concreta para un refugio real</span>
+              </span>
+            </button>
+            <button class="historia__tab" type="button" role="tab" id="tab-familias" aria-controls="panel-familias" aria-selected="false" tabindex="-1">
+              <img class="historia__miniatura" src="assets/img/miniaturas/familias.webp" width="240" height="150" alt="">
+              <span class="historia__tab-texto">
+                <span class="historia__tab-titulo">Para las familias</span>
+                <span class="historia__tab-bajada">Una charla sobre adoptar, en casa</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="historia__paneles">
+            <div class="historia__panel" role="tabpanel" id="panel-pitch" aria-labelledby="tab-pitch" tabindex="0">
+              <div class="historia__visual">
+                <video controls preload="metadata" playsinline poster="assets/img/video-poster.webp">
+                  <source src="assets/video/video-pitch.mp4" type="video/mp4">
+                  Tu navegador no puede reproducir el video.
+                </video>
+              </div>
+              <div class="historia__texto">
+                <h3 class="historia__titulo">Quiénes somos y por qué lo hacemos.</h3>
+                <p>
+                  Somos un emprendimiento escolar con una idea: que un peluche con certificado y reglas de cuidado convierta el
+                  juego en una primera lección de empatía, responsabilidad y respeto por los animales. En este video te lo contamos.
+                </p>
+              </div>
+            </div>
+
+            <div class="historia__panel" role="tabpanel" id="panel-chicos" aria-labelledby="tab-chicos" tabindex="0" hidden>
+              <div class="historia__visual">
+                <img class="historia__certificado" src="assets/img/certificado.webp" width="760" height="808" loading="lazy"
+                     alt="Certificado de Adopción Oficial con espacios para el nombre del dueño y de la mascota">
+              </div>
+              <div class="historia__texto">
+                <h3 class="historia__titulo">Un certificado con su nombre es un compromiso.</h3>
+                <p>
+                  Al completar el Certificado de Adopción Oficial y elegirle un nombre, el peluche pasa a ser su responsabilidad.
+                  Las reglas de cuidado que vienen en la cajita les muestran, jugando, que cuidar a alguien es algo de todos los días.
+                </p>
+              </div>
+            </div>
+
+            <div class="historia__panel" role="tabpanel" id="panel-animales" aria-labelledby="tab-animales" tabindex="0" hidden>
+              <div class="historia__visual">
+                <img class="historia__refugio" src="assets/img/callejeritos.webp" width="280" height="280" loading="lazy"
+                     alt="Logo de Los Callejeritos de Flores">
+              </div>
+              <div class="historia__texto">
+                <h3 class="historia__titulo">Cada cajita se convierte en ayuda concreta.</h3>
+                <p>
+                  La mayor parte de lo que ganamos va directo a Los Callejeritos de Flores y llega al refugio convertida en
+                  alimento y en lo que más necesiten los animales que esperan un hogar.
+                </p>
+              </div>
+            </div>
+
+            <div class="historia__panel" role="tabpanel" id="panel-familias" aria-labelledby="tab-familias" tabindex="0" hidden>
+              <div class="historia__visual">
+                <div class="sticker sticker--inclinado historia__sticker">
+                  <div class="feston feston--blanco">
+                    <img src="assets/img/logo-marca.webp" width="900" height="900" loading="lazy"
+                         alt="Un perrito y un gatito abrazados formando un corazón">
+                  </div>
+                </div>
+              </div>
+              <div class="historia__texto">
+                <h3 class="historia__titulo">Una charla en casa que puede cambiar una vida.</h3>
+                <p>
+                  El peluche llega a casa y abre una conversación sobre la adopción responsable: qué implica cuidar a un animal
+                  y por qué tantos esperan un hogar. A veces, esa charla termina con un callejerito de verdad adoptado.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PEDIDOS / DÓNDE ENCONTRARNOS ============ -->
+    <section class="seccion seccion--pedidos" id="pedidos" aria-labelledby="pedidos-titulo">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <h2 id="pedidos-titulo">¿Querés tu cajita?</h2>
+          <p class="entrada">Tenés dos formas de conseguirla.</p>
+        </div>
+
+        <ul class="canales" role="list">
+          <li class="canal">
+            <svg class="canal__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9 5 4h14l1.5 5M3.5 9a2.8 2.8 0 0 0 5.7 0 2.8 2.8 0 0 0 5.6 0 2.8 2.8 0 0 0 5.7 0M5 12v8h14v-8M10 20v-5h4v5"/></svg>
+            <div>
+              <h3>En el stand del colegio</h3>
+              <p>Nos encontrás en los recreos, en el aula 3.</p>
+            </div>
+          </li>
+          <li class="canal">
+            <svg class="canal__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6h17v12h-17zM3.5 7l8.5 6 8.5-6"/></svg>
+            <div>
+              <h3>Por mail</h3>
+              <p>Escribinos y te reservamos una.</p>
+              <p><a class="mail" href="mailto:fluffyplushcenter@gmail.com">fluffyplushcenter<wbr>@gmail.com</a></p>
+              <div class="acciones">
+                <a class="boton boton--principal" href="mailto:fluffyplushcenter@gmail.com?subject=Quiero%20una%20cajita%20Fluffy">Escribinos un mail</a>
+                <button class="boton boton--secundario" type="button" id="copiar-mail" data-mail="fluffyplushcenter@gmail.com" aria-live="polite">Copiar el mail</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor pie__grilla">
+      <img class="pie__sello" src="assets/img/sello-caja.webp" width="600" height="224" loading="lazy"
+           alt="Sello de la caja: Paquete de entrega especial. Frágil: corazón delicado">
+      <div class="pie__texto">
+        <p class="pie__marca">Fluffy Plush Center</p>
+        <p>Emprendimiento escolar aliado con Los Callejeritos de Flores.</p>
+        <ul class="pie__redes" role="list">
+          <li><a href="mailto:fluffyplushcenter@gmail.com">fluffyplushcenter<wbr>@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/fluffyplushcenter/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+        <p class="pie__legal">© <span id="anio">2026</span> Fluffy Plush Center</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

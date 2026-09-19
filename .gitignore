@@ -1,0 +1,8 @@
+# Documentación interna del emprendimiento: comprobantes, planillas y
+# certificados de acciones. NO se sube: el repositorio es público.
+/docs/
+
+# Archivos del sistema
+Thumbs.db
+desktop.ini
+.DS_Store
