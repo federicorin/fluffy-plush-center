@@ -6,3 +6,7 @@
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Archivos de herramientas y del editor
+.serena/
+*.code-workspace

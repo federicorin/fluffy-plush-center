@@ -462,7 +462,10 @@
               <p>Escribinos y te reservamos una.</p>
               <p><a class="mail" href="mailto:fluffyplushcenter@gmail.com">fluffyplushcenter<wbr>@gmail.com</a></p>
               <div class="acciones">
-                <a class="boton boton--principal" href="mailto:fluffyplushcenter@gmail.com?subject=Quiero%20una%20cajita%20Fluffy">Escribinos un mail</a>
+                <!-- Enlace de redacción de Gmail: funciona aunque no haya un programa
+                     de correo configurado, que es lo que rompía el enlace mailto. -->
+                <a class="boton boton--principal" target="_blank" rel="noopener"
+                   href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fluffyplushcenter@gmail.com&amp;su=Quiero%20una%20cajita%20Fluffy">Escribinos por Gmail</a>
                 <button class="boton boton--secundario" type="button" id="copiar-mail" data-mail="fluffyplushcenter@gmail.com" aria-live="polite">Copiar el mail</button>
               </div>
             </div>
