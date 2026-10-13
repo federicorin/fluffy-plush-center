@@ -657,9 +657,8 @@ section[id] { scroll-margin-top: 92px; }
 
 /* Dorso: el peluche que te tocó */
 .cajita__dorso {
-  grid-template-rows: minmax(0, 1fr) auto;
-  gap: .5rem;
-  padding: 10px 10px 12px;
+  grid-template-rows: minmax(0, 1fr);
+  padding: 10px;
   background: var(--blanco);
   transform: rotateY(180deg);
 }
@@ -669,13 +668,6 @@ section[id] { scroll-margin-top: 92px; }
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
-}
-.cajita__nombre {
-  font-family: var(--f-titulos);
-  font-weight: 600;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .cajita[aria-pressed="true"] .cajita__frente { transform: rotateY(-180deg); }

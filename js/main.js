@@ -58,8 +58,7 @@
       cajita.setAttribute('aria-pressed', String(!estabaAbierta));
 
       if (!estabaAbierta) {
-        const nombre = cajita.querySelector('.cajita__nombre').textContent.trim();
-        aviso.textContent = `¡Te eligió ${nombre}!`;
+        aviso.textContent = '¡Este peluche te eligió!';
       } else if (!hayAbiertas()) {
         aviso.textContent = '';
       }
