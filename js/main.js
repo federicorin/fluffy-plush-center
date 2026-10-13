@@ -59,6 +59,14 @@
 
       if (!estabaAbierta) {
         aviso.textContent = '¡Este peluche te eligió!';
+        // Para lectores de pantalla, el aviso también dice qué peluche es
+        const foto = cajita.querySelector('.cajita__dorso img');
+        if (foto) {
+          const descripcion = document.createElement('span');
+          descripcion.className = 'visualmente-oculto';
+          descripcion.textContent = ` ${foto.alt}.`;
+          aviso.append(descripcion);
+        }
       } else if (!hayAbiertas()) {
         aviso.textContent = '';
       }
