@@ -173,18 +173,14 @@ section[id] { scroll-margin-top: 92px; }
   font-style: italic;
 }
 
-.foto-pendiente {
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  border: 2px dashed var(--rosa);
-  border-radius: 16px;
-  background: var(--rosa-claro);
-  color: var(--cacao-suave);
-  font-size: .85rem;
-  font-weight: 700;
-  line-height: 1.3;
-  text-align: center;
+/* Texto que solo leen los lectores de pantalla */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* ---------- Botones ---------- */
@@ -590,21 +586,17 @@ section[id] { scroll-margin-top: 92px; }
 }
 .sorpresa__intro { display: grid; gap: 1.1rem; }
 
-@media (max-width: 860px) {
-  .sorpresa__grilla { grid-template-columns: minmax(0, 1fr); row-gap: 1rem; }
-  .sorpresa__intro { display: contents; }
-  .cajitas { order: 1; margin-top: .75rem; }
-  .sorpresa__pie { order: 2; min-height: 0; margin-top: 0; }
-}
-
 .cajitas {
+  --separacion: clamp(1rem, 2.5vw, 1.75rem);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 2.5vw, 1.75rem);
+  gap: var(--separacion);
   margin: 0;
   padding: 0;
   list-style: none;
 }
+/* Si la última cajita queda sola en su fila, va al centro */
+.cajitas > li:last-child:nth-child(3n + 1) { grid-column: 2; }
 
 .cajita {
   position: relative;
@@ -662,8 +654,7 @@ section[id] { scroll-margin-top: 92px; }
   background: var(--blanco);
   transform: rotateY(180deg);
 }
-.cajita__dorso img,
-.cajita__dorso .foto-pendiente {
+.cajita__dorso img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -700,9 +691,21 @@ section[id] { scroll-margin-top: 92px; }
   color: var(--frambuesa);
 }
 
+@media (max-width: 860px) {
+  .sorpresa__grilla { grid-template-columns: minmax(0, 1fr); row-gap: 1rem; }
+  .sorpresa__intro { display: contents; }
+  .cajitas { order: 1; margin-top: .75rem; }
+  .sorpresa__pie { order: 2; min-height: 0; margin-top: 0; }
+}
+
 @media (max-width: 640px) {
   .cajitas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .cajita__dorso .foto-pendiente { font-size: .75rem; }
+  .cajitas > li:last-child:nth-child(3n + 1) { grid-column: auto; }
+  .cajitas > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - var(--separacion)) / 2);
+  }
 }
 
 /* ---------- Cómo funciona ---------- */
