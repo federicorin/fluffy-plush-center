@@ -173,20 +173,6 @@ section[id] { scroll-margin-top: 92px; }
   font-style: italic;
 }
 
-.foto-pendiente {
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  border: 2px dashed var(--rosa);
-  border-radius: 16px;
-  background: var(--rosa-claro);
-  color: var(--cacao-suave);
-  font-size: .85rem;
-  font-weight: 700;
-  line-height: 1.3;
-  text-align: center;
-}
-
 /* ---------- Botones ---------- */
 
 .acciones {
@@ -665,8 +651,7 @@ section[id] { scroll-margin-top: 92px; }
   background: var(--blanco);
   transform: rotateY(180deg);
 }
-.cajita__dorso img,
-.cajita__dorso .foto-pendiente {
+.cajita__dorso img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -711,7 +696,6 @@ section[id] { scroll-margin-top: 92px; }
     justify-self: center;
     width: calc((100% - var(--separacion)) / 2);
   }
-  .cajita__dorso .foto-pendiente { font-size: .75rem; }
 }
 
 /* ---------- Cómo funciona ---------- */
