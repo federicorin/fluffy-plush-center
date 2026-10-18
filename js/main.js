@@ -51,6 +51,8 @@
   const botonCerrar = document.getElementById('cerrar-cajitas');
 
   const hayAbiertas = () => cajitas.some((c) => c.getAttribute('aria-pressed') === 'true');
+  // En pantallas angostas el aviso flota abajo y podría tapar la cajita recién abierta
+  const pantallaAngosta = window.matchMedia('(max-width: 860px)');
 
   cajitas.forEach((cajita) => {
     cajita.addEventListener('click', () => {
@@ -69,8 +71,12 @@
         }
       } else if (!hayAbiertas()) {
         aviso.textContent = '';
+      } else {
+        // La descripción era del peluche que se acaba de cerrar
+        aviso.querySelector('.visualmente-oculto')?.remove();
       }
       botonCerrar.hidden = !hayAbiertas();
+      if (!estabaAbierta && pantallaAngosta.matches) cajita.scrollIntoView({ block: 'nearest' });
     });
   });
 
