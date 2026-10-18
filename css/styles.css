@@ -581,10 +581,14 @@ section[id] { scroll-margin-top: 92px; }
 .sorpresa__grilla {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(2rem, 5vw, 4.5rem);
 }
 .sorpresa__intro { display: grid; gap: 1.1rem; }
+/* La grilla es más alta que el texto: el texto acompaña al bajar, con el aviso a la vista */
+@media (min-width: 861px) {
+  .sorpresa__intro { position: sticky; top: 110px; }
+}
 
 .cajitas {
   --separacion: clamp(1rem, 2.5vw, 1.75rem);
@@ -696,6 +700,17 @@ section[id] { scroll-margin-top: 92px; }
   .sorpresa__intro { display: contents; }
   .cajitas { order: 1; margin-top: .75rem; }
   .sorpresa__pie { order: 2; min-height: 0; margin-top: 0; }
+  /* Con una cajita abierta, el aviso y el botón flotan abajo para que se vean */
+  .sorpresa__pie:has(> button:not([hidden])) {
+    position: sticky;
+    bottom: 12px;
+    z-index: 5;
+    gap: .6rem 1rem;
+    padding: .8rem 1rem;
+    border-radius: 24px;
+    background: var(--blanco);
+    box-shadow: 0 14px 30px -12px rgb(var(--sombra) / .45);
+  }
 }
 
 @media (max-width: 640px) {

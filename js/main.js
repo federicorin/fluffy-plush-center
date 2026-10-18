@@ -69,6 +69,9 @@
         }
       } else if (!hayAbiertas()) {
         aviso.textContent = '';
+      } else {
+        // La descripción era del peluche que se acaba de cerrar
+        aviso.querySelector('.visualmente-oculto')?.remove();
       }
       botonCerrar.hidden = !hayAbiertas();
     });
