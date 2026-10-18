@@ -92,7 +92,7 @@ a:hover { color: var(--frambuesa-honda); }
   border-radius: 6px;
 }
 
-section[id] { scroll-margin-top: 92px; }
+html { scroll-padding-top: 92px; }
 
 .contenedor {
   width: 100%;
@@ -711,6 +711,9 @@ section[id] { scroll-margin-top: 92px; }
     background: var(--blanco);
     box-shadow: 0 14px 30px -12px rgb(var(--sombra) / .45);
   }
+  .sorpresa__pie:has(> button:not([hidden])) .sorpresa__aviso { font-size: 1.55rem; }
+  /* ...y lo que se enfoca o se abre no queda debajo del aviso */
+  html:has(.sorpresa__pie > button:not([hidden])) { scroll-padding-bottom: 130px; }
 }
 
 @media (max-width: 640px) {
